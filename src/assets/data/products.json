@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Margherita Pizza",
+    "price": 10,
+    "imageLink": "assets/products/product1.jpg"
+  },
+  {
+    "name": "Beef Burger",
+    "price": 12,
+    "imageLink": "assets/products/product2.jpg"
+  },
+  {
+    "name": "Penne Alfredo",
+    "price": 11,
+    "imageLink": "assets/products/product3.jpg"
+  },
+  {
+    "name": "Greek Salad",
+    "price": 9,
+    "imageLink": "assets/products/product4.jpg"
+  },
+  {
+    "name": "Noodle Soup",
+    "price": 11,
+    "imageLink": "assets/products/product5.jpg"
+  },
+  {
+    "name": "Grilled Steak",
+    "price": 18,
+    "imageLink": "assets/products/product6.jpg"
+  },
+  {
+    "name": "Roasted meatballs",
+    "price": 3,
+    "imageLink": "assets/products/product7.jpg"
+  },
+  {
+    "name": "Grilled Chicken",
+    "price": 12,
+    "imageLink": "assets/products/product8.jpg"
+  },
+  {
+    "name": "Chicken Schnitzel",
+    "price": 3,
+    "imageLink": "assets/products/product9.jpg"
+  },
+  {
+    "name": "Fish fingers",
+    "price": 9,
+    "imageLink": "assets/products/product10.jpg"
+  },
+  {
+    "name": "Grilled Mushrooms",
+    "price": 18,
+    "imageLink": "assets/products/product11.jpg"
+  },
+  {
+    "name": "Cabbage Stew",
+    "price": 2,
+    "imageLink": "assets/products/product12.jpg"
+  },
+  {
+    "name": "Espresso",
+    "price": 4,
+    "imageLink": "assets/products/product13.jpg"
+  },
+  {
+    "name": "Chocolate Cake",
+    "price": 7,
+    "imageLink": "assets/products/product14.jpg"
+  },
+  {
+    "name": "Fresh Juice",
+    "price": 5,
+    "imageLink": "assets/products/product15.jpg"
+  }
+]

@@ -118,14 +118,16 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        padding: 1rem;
       }
       
       .feedback-list {
-        max-height: 135px;
+        max-height: 160px;
         overflow-y: auto;
         margin-bottom: 10px;
         width: 100%;
         text-align: center;
+        padding: 1rem;
       }
       
       .feedback-item {
@@ -142,6 +144,10 @@
       
       .padding10 {
         padding: 10px;
+      }
+
+      .padding15{
+        padding: 15px;
       }
       
       iframe {
@@ -300,7 +306,7 @@
       #image-slideshow-section {
         width: 100%;
         /* background: #f4f4f4; */
-        padding: 20px 0;
+        /* padding: 1rem; */
       }
 
       .slideshow-wrapper {
@@ -386,32 +392,35 @@
 
       .image-container {
         display: flex;
-        flex-wrap: wrap;       /* Permite trecerea pe linie nouă la nevoie */
-        justify-content: center;
-        width: 70%;
+        flex-direction: column; /* X deasupra lui Y */
+        gap: 1rem;
+        width: 100%;
         margin: 0 auto;
-        gap: 10px;
+        padding: 1.5rem;
       }
 
       .box {
-        flex: 1 1 300px;        /* Minimum 300px, se adaptează la spațiu */
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        flex-direction: row; /* Imaginile A–C sau D–F pe orizontală */
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: nowrap;
       }
 
       .box img {
-        height: 200px;
-        min-width: 400px;
+        width: 33%;
+        height: auto;
         border-radius: 20px;
-        /* width: auto; */
-        /* object-fit: contain; */
       }
 
       @media (max-width: 768px) {
-        .image-box {
-          flex: 1 1 100%;
+        .box {
+          flex-direction: column; /* fiecare imagine pe rând propriu */
+          align-items: center;
+        }
+
+        .box img {
+          width: 90%; /* pentru mobil */
         }
 
         .height200 {
@@ -436,7 +445,7 @@
       </div>
     </nav> 
     
-    <img src="https://media.istockphoto.com/id/543812746/ro/fotografie/palatul-parlamentului-pe-timp-de-noapte.jpg?s=1024x1024&w=is&k=20&c=EMk5vDJAEyeczRXPpCbtHWMFBib8U8CbpAvex7o4504=" alt="Parliament Building" class="header-image" />
+    <img src="assets/wallpaper.jpg" alt="Parliament Building" class="header-image" />
 
     <section id="specialties" class="section">
       <h2 class="padding10" style="display: flex; align-items: center; gap: 10px;">
@@ -447,11 +456,11 @@
         </button>        
       </h2>      
       <div id="specialtiesGallery">
-        <div class="pagination elements-align-center" id="pagination">
-          <button style="border-radius: 30px;" onclick="changePage(1)">1</button>
-          <button style="border-radius: 30px;" onclick="changePage(2)">2</button>
-          <button style="border-radius: 30px;" onclick="changePage(3)">3</button>
-        </div>
+      <div class="pagination elements-align-center pagination-buttons">
+        <button class="page-btn" data-page="1" style="border-radius: 30px;">1</button>
+        <button class="page-btn" data-page="2" style="border-radius: 30px;">2</button>
+        <button class="page-btn" data-page="3" style="border-radius: 30px;">3</button>
+      </div>
 
         <br>
 
@@ -482,13 +491,12 @@
           </div> -->
         </div>
   
-        <div class="pagination elements-align-center" id="pagination">
-          <div class="pagination elements-align-center" id="pagination">
-            <button style="border-radius: 30px;" onclick="changePage(1)">1</button>
-            <button style="border-radius: 30px;" onclick="changePage(2)">2</button>
-            <button style="border-radius: 30px;" onclick="changePage(3)">3</button>
-        </div>
-      </div>      
+      <div class="pagination elements-align-center pagination-buttons">
+        <button class="page-btn" data-page="1" style="border-radius: 30px;">1</button>
+        <button class="page-btn" data-page="2" style="border-radius: 30px;">2</button>
+        <button class="page-btn" data-page="3" style="border-radius: 30px;">3</button>
+      </div>
+      </div>
     </section>
     
     <section id="reservation-carousel" class="section">
@@ -531,9 +539,9 @@
           <div class="carousel-wrapper">
             <button class="carousel-arrow left" onclick="prevSlide()">&#10094;</button>
             <div class="carousel" id="carousel">
-              <img src="https://img.freepik.com/free-vector/festa-junina-poster-invitation-with-different-pennants_23-2147816654.jpg" alt="Event 1">
-              <img src="https://img.freepik.com/free-vector/hand-drawn-music-festival-poster-template_23-2148099743.jpg" alt="Event 2">
-              <img src="https://img.freepik.com/free-vector/hand-drawn-music-festival-poster_23-2148244183.jpg" alt="Event 3">
+              <img src="assets/events/event1.jpg" alt="Event 1">
+              <img src="assets/events/event2.jpg" alt="Event 2">
+              <img src="assets/events/event3.jpg" alt="Event 3">
             </div>
             <button class="carousel-arrow right" onclick="nextSlide()">&#10095;</button>
           </div>
@@ -568,43 +576,61 @@
         <div class="feedback-list" id="feedback-list">
           <!-- Feedback items will be dynamically inserted here -->
         </div>
-
-        <h3 class="padding10" id="delivery">Delivery</h3>
+        
         <div class="image-container">
+          <h3 id="delivery">Delivery</h3>
           <div class="box" id="X">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2a/28/77/2a2877ad-be37-b633-729f-39cc851cd206/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/1200x630wa.png" alt="Imagine A">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b7/8a/b7/b78ab78d-c200-b06a-01b8-7e59da198655/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/1200x630wa.png" alt="Imagine B">
+            <img src="assets/delivery/delivery1.png" alt="Imagine A">
+            <img src="assets/delivery/delivery2.png" alt="Imagine B">
+            <img src="assets/delivery/delivery3.png" alt="Imagine D">
           </div>
           <div class="box" id="Y">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/11/bf/1411bf07-5065-13d9-0fa2-f0fa21dafa58/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-85-220.png/1200x600wa.png" alt="Imagine C">
-            <img src="https://razvancalin.ro/wp-content/uploads/2020/05/tazz-by-emag.jpg" alt="Imagine D">
+            <img src="assets/delivery/delivery4.png" alt="Imagine C">
+            <img src="assets/delivery/delivery5.png" alt="Imagine D">
+            <img src="assets/delivery/delivery6.png" alt="Imagine B">
           </div>
         </div>
         
         <br>
         <!-- Slideshow între Newsletter și Contact Us -->
         <div id="image-slideshow-section">
-          <h3 class="padding10" id="partners">Partners</h3>
+          <h3 class="padding15" id="partners">Partners</h3>
           <div class="slideshow-wrapper">
             <button class="slideshow-arrow left" onclick="prevSlideshowSlide()">&#10094;</button>
             <div class="slideshow-viewport">
               <div class="slideshow-track" id="slideshow-track">                
-                <img src="https://justcreative.com/wp-content/uploads/2022/01/KFC-Logo-600x400.png" alt="1">
-                <img src="https://justcreative.com/wp-content/uploads/2023/02/mcdonalds.png" alt="4">
-                <img src="https://justcreative.com/wp-content/uploads/2022/01/Burger-King-Logo-600x400.png" alt="1">                
-                <img src="https://logowik.com/content/uploads/images/nestle7563.logowik.com.webp" alt="1">
-                <img src="https://justcreative.com/wp-content/uploads/2022/01/Starbucks-Logo-600x400.png" alt="4">
-                <img src="https://justcreative.com/wp-content/uploads/2022/01/Coca-Cola-Logo-600x400.png" alt="1">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdc8dhDm27RSmvr-eE-662f-EgGbN39ei1kg&s" alt="1">
-                <img src="https://eeatingh.ro/assets/thumbnails/fit_200x200_e517fff21ef6e6444613423f5e3c76ee.png" alt="4">
-                <img src="https://stor0.anuntul.ro/media/foto/orig/2018/11/14/207406691.jpg" alt="1">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcfGKSfvGxphpjF7ragmCpQXpYa9iqDyeNfmlY6fYw5-6ECPs1eylcTf4y3ld3Jv2w-ag&usqp=CAU" alt="1">
-                <img src="https://www.francize.ro/wp-content/uploads/2022/02/272281992_1772086866332406_616957516987426944_n-112x112.jpg" alt="4">
-                <img src="https://fameup.com/wp-content/uploads/2022/10/foodpanda-1.jpg" alt="1">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2a/28/77/2a2877ad-be37-b633-729f-39cc851cd206/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/1200x630wa.png" alt="1">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b7/8a/b7/b78ab78d-c200-b06a-01b8-7e59da198655/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/1200x630wa.png" alt="1">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/11/bf/1411bf07-5065-13d9-0fa2-f0fa21dafa58/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-85-220.png/1200x600wa.png" alt="1">                
-                <img src="https://razvancalin.ro/wp-content/uploads/2020/05/tazz-by-emag.jpg" alt="1">
+                <img src="assets/partners/partner1.jpg" alt="1">
+                <img src="assets/partners/partner2.jpg" alt="1">
+                <img src="assets/partners/partner3.jpg" alt="1">
+                <img src="assets/partners/partner4.jpg" alt="1">
+                <img src="assets/partners/partner5.jpg" alt="1">
+                <img src="assets/partners/partner6.jpg" alt="1">
+                <img src="assets/partners/partner7.jpg" alt="1">
+                <img src="assets/partners/partner8.jpg" alt="1">
+                <img src="assets/partners/partner9.jpg" alt="1">
+                <img src="assets/partners/partner10.jpg" alt="1">
+                <img src="assets/partners/partner11.jpg" alt="1">
+                <img src="assets/partners/partner12.jpg" alt="1">
+                <img src="assets/partners/partner13.jpg" alt="1">
+                <img src="assets/partners/partner14.jpg" alt="1">
+                <img src="assets/partners/partner15.jpg" alt="1">
+                <img src="assets/partners/partner16.jpg" alt="1">
+                <img src="assets/partners/partner1.jpg" alt="1">
+                <img src="assets/partners/partner2.jpg" alt="1">
+                <img src="assets/partners/partner3.jpg" alt="1">
+                <img src="assets/partners/partner4.jpg" alt="1">
+                <img src="assets/partners/partner5.jpg" alt="1">
+                <img src="assets/partners/partner6.jpg" alt="1">
+                <img src="assets/partners/partner7.jpg" alt="1">
+                <img src="assets/partners/partner8.jpg" alt="1">
+                <img src="assets/partners/partner9.jpg" alt="1">
+                <img src="assets/partners/partner10.jpg" alt="1">
+                <img src="assets/partners/partner11.jpg" alt="1">
+                <img src="assets/partners/partner12.jpg" alt="1">
+                <img src="assets/partners/partner13.jpg" alt="1">
+                <img src="assets/partners/partner14.jpg" alt="1">
+                <img src="assets/partners/partner15.jpg" alt="1">
+                <img src="assets/partners/partner16.jpg" alt="1">                    
               </div>
             </div>
             <button class="slideshow-arrow right" onclick="nextSlideshowSlide()">&#10095;</button>
@@ -613,7 +639,7 @@
 
         <div id="contact">
           <br>
-          <h3 class="padding10">Contact Us</h3>
+          <h3 class="padding15">Contact Us</h3>
           <iframe class="height200" style="border-radius: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.685857297522!2d26.08804781558543!3d44.42721037910244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff37ac9e56d5%3A0x859f5d78a63fa10e!2sPalatul%20Parlamentului!5e0!3m2!1sen!2sro!4v1648123456789" allowfullscreen="" loading="lazy"> </iframe>
           <div class="contact-info"> 
             <span><strong>Address:</strong> Strada Izvor 2-4, București 050563</span> 
@@ -637,109 +663,37 @@
           return products;
         } 
         catch (error) {
-          console.error('Failed to load specials:', error);
-          return [];
+          // console.error('Failed to load specials:', error);
+          // return [];
+          const response = await fetch('http://localhost:4200/assets/data/products.json');
+          const products = await response.json();
+          return products;
         }
       }
 
       document.addEventListener("DOMContentLoaded", async () => {
-      const ppp = await loadSpecials();
+        const ppp = await loadSpecials();
 
-      const dynamicProducts = ppp.map(product => ({
-        image: product.imageLink || "Bad Link", // înlocuiește cu product.image dacă există în API
-        name: product.name || "Unnamed Product",
-        price: `$${product.price?.toFixed(2) || "0.00"}`
-      }));
+        const dynamicProducts = ppp.map(product => ({
+          image: product.imageLink || "Bad Link",
+          name: product.name || "Unnamed Product",
+          price: `$${product.price?.toFixed(2) || "0.00"}`
+        }));
 
-      const staticProducts = [
-        {
-          image: "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg",
-          name: "Margherita Pizza",
-          price: "7"
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/detailed-bestquality-two-burgers-4k-hd-photo_1193781-9907.jpg",
-          name: "Beef Burger",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/traditional-italian-penne-pasta-with-bolognese-sauce-fresh-basil-black-background-side-view-close-up_166116-4345.jpg",
-          name: "Penne Alfredo",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/free-photo/top-view-tasty-salad-with-vegetables_23-2148515491.jpg",
-          name: "Greek Salad",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/free-photo/chicken-noodle-soup-white-bowl-wooden-table_123827-20138.jpg",
-          name: "Noodle Soup",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/steak-ribeye-grilled-with-pepper-garlic_79782-2239.jpg",
-          name: "Grilled Steak",
-          price: ""
-        },      
-        {
-          image: "https://img.freepik.com/premium-photo/roasted-meatballs-with-tomatoes-garlic-parsley_266870-7982.jpg",
-          name: "Roasted meatballs",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/free-photo/side-view-chicken-breast-stuffed-with-spinach-sauce-table_141793-4812.jpg",
-          name: "Grilled Chicken",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/schnitzel-cordon-bleu-fillet-cutlet-with-ham-cheese-black-background-top-view_89816-40714.jpg",
-          name: "Chicken Schnitzel",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/deep-fried-fish-fingers-wooden-board-white-background-top-view_89816-57974.jpg",
-          name: "Fish fingers",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/grilled-mushroom-delight_974629-11359.jpg",
-          name: "Grilled Mushrooms",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/premium-photo/stewed-braised-cabbage-served-bowl-background_1173776-7723.jpg",
-          name: "Cabbage Stew",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/free-photo/cup-coffee-with-heart-drawn-foam_1286-70.jpg",
-          name: "Espresso",
-          price: ""
-        },
-        {
-          image: "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-85732.jpg",
-          name: "Chocolate Cake",
-          price: ""
-        },  
-        {
-          image: "https://img.freepik.com/free-photo/fresh-orange-juice-glass-dark-background_1150-45560.jpg",
-          name: "Fresh Juice",
-          price: ""
-        }
-      ];
+        const allProducts = [...dynamicProducts];
 
-      const allProducts = [...dynamicProducts];
+        // Initial render
+        renderProducts(1, allProducts);
 
-      // Afișare inițială
-      renderProducts(1, allProducts);
-
-      // Adaugă evenimente pentru butoanele de paginare
-      const buttons = document.querySelectorAll("#pagination button");
-      buttons.forEach((btn, index) => {
-        btn.addEventListener("click", () => changePage(index + 1, allProducts));
+        // Attach to all buttons with .page-btn
+        const pageButtons = document.querySelectorAll(".page-btn");
+        pageButtons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            const pageNum = parseInt(btn.getAttribute("data-page"), 10);
+            changePage(pageNum, allProducts);
+          });
+        });
       });
-    });
 
       function shuffleArray(arr) {
         return arr.map(value => ({ value, sort: Math.random() }))
@@ -763,10 +717,13 @@
 
       function changePage(pageNum, productList) {
         renderProducts(pageNum, productList);
-        const buttons = document.querySelectorAll("#pagination button");
-        buttons.forEach((btn, index) => {
-          btn.style.backgroundColor = (index + 1 === pageNum) ? "#444" : "#eee";
-          btn.style.color = (index + 1 === pageNum) ? "#fff" : "#000";
+
+        const buttons = document.querySelectorAll(".page-btn");
+        buttons.forEach((btn) => {
+          const btnPage = parseInt(btn.getAttribute("data-page"), 10);
+          const isActive = btnPage === pageNum;
+          btn.style.backgroundColor = isActive ? "#444" : "#eee";
+          btn.style.color = isActive ? "#fff" : "#000";
         });
       }
 
@@ -933,7 +890,11 @@
           document.getElementById('event-duration').textContent = `${formattedDuration}`;
         } 
         catch (error) {
-          console.error('Eroare la încărcarea detaliilor evenimentului:', error);
+          // console.error('Eroare la încărcarea detaliilor evenimentului:', error);
+          document.getElementById('event-date').textContent = "June 1, 2025";
+          document.getElementById('event-time').textContent = "19:00";
+          document.getElementById('event-guest').textContent = "DJ Vasile";
+          document.getElementById('event-duration').textContent = "3h 30min";          
         }
       }
 
@@ -953,10 +914,21 @@
             item.textContent = `${feedback.clientName} - "${feedback.message}"`;
             feedbackList.appendChild(item);
           });
-
         } 
         catch (error) {
-          console.error('Eroare la încărcarea feedback-urilor:', error);
+          // console.error('Eroare la încărcarea feedback-urilor:', error);
+          const response = await fetch('http://localhost:4200/assets/data/feedbacks.json');
+          const feedbacks = await response.json();
+
+          const feedbackList = document.getElementById('feedback-list');
+          feedbackList.innerHTML = ''; // Clear existing content
+
+          feedbacks.forEach(feedback => {
+            const item = document.createElement('div');
+            item.className = 'feedback-item';
+            item.textContent = `${feedback.clientName} - "${feedback.message}"`;
+            feedbackList.appendChild(item);
+          });
         }
       }
 
@@ -1133,7 +1105,17 @@
           }
         } 
         catch (err) {
-          console.error('Fetch error:', err);
+          // console.error('Fetch error:', err);
+          fetchedReservations.push({
+            email: "john.doe@gmail.com",
+            name: "John Doe",
+            numberOfGuests: 4,
+            phone: "0727123456",            
+            scheduleDate: "2025-05-26T00:00:00",
+            scheduleTime: "07:00:00"
+          });
+
+          document.getElementById('show-reservation-btn').style.display = 'inline-block';
         }
       }
 

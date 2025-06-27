@@ -1,0 +1,27 @@
+[
+  {
+    "clientName": "Victor",
+    "message": "Amazing drinks and cozy vibe!",
+    "rating": 5
+  },
+  {
+    "clientName": "Mihai",
+    "message": "Great food, service and location!",
+    "rating": 5
+  },
+  {
+    "clientName": "Andrei",
+    "message": "Salutari din Ro, vom reveni cu placere!",
+    "rating": 5
+  },
+  {
+    "clientName": "Alexander",
+    "message": "Best meatballs ever!",
+    "rating": 5
+  },
+  {
+    "clientName": "Vali",
+    "message": "Sar`na pt masa!",
+    "rating": 5
+  }
+]
