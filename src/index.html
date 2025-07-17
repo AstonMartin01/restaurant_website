@@ -20,7 +20,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: black;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -30,7 +30,7 @@
       
       nav a {
         color: white;
-        padding: 15px 20px;
+        padding: 20px;
         text-decoration: none;
         font-weight: bold;
       }
@@ -60,7 +60,7 @@
       }
       
       .header-image {
-        margin-top: 50px;
+        margin-top: 69px;
         /* space for fixed nav */
         width: 100%;
         max-height: auto;
@@ -88,7 +88,7 @@
       
       .menu-item {
         margin-top: 0.5rem;
-        font-weight: bold;
+        /* font-weight: bold; */
       }
       
       form input,
@@ -122,7 +122,7 @@
       }
       
       .feedback-list {
-        max-height: 160px;
+        max-height: 195px;
         overflow-y: auto;
         margin-bottom: 10px;
         width: 100%;
@@ -136,19 +136,7 @@
         margin-bottom: 5px;
         border-radius: 5px;
         font-style: italic;
-      }
-      
-      .width100 {
-        width: 100%;
-      }
-      
-      .padding10 {
-        padding: 10px;
-      }
-
-      .padding15{
-        padding: 15px;
-      }
+      }      
       
       iframe {
         width: 100%;
@@ -164,59 +152,6 @@
         text-align: center;
         gap: 0.5rem;
         margin: 1rem 0;
-      }
-      
-      @media (min-width: 768px) {
-        .footer-section {
-          flex-direction: row;
-          justify-content: space-between;
-          gap: 2rem;
-        }
-        .footer-section > div {
-          width: 48%;
-        }
-        .nav-toggle {
-          display: none;
-        }
-        .nav-links {
-          display: flex !important;
-        }
-        .contact-info {
-          flex-direction: row;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        .contact-info span {
-          margin: 0 1rem;
-        }
-      }
-      
-      @media (max-width: 767px) {
-        nav {
-          flex-direction: column;
-          align-items: flex-start;
-          padding-top: 50px;
-        }
-        .nav-toggle {
-          display: flex;
-          position: absolute;
-          top: 10px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        .nav-links {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-          background-color: rgba(0, 0, 0, 0.95);
-        }
-        .nav-links a {
-          padding: 15px;
-          border-top: 1px solid #444;
-        }
-        .nav-links.show {
-          display: flex;
-        }
       }
       
       .elements-align-center {
@@ -251,16 +186,6 @@
         gap: 2rem;
       }
 
-      @media (min-width: 1068px) {
-        .reservation-carousel-container {
-          flex-direction: row;
-          justify-content: space-between;
-        }
-        .reservation-form, .carousel-section {
-          width: 48%;
-        }
-      }
-
       .carousel-wrapper {
         position: relative;
         overflow: hidden;
@@ -274,8 +199,9 @@
       }
 
       .carousel img {
+        margin-top: 10px;
         min-height: 400px;
-        max-height: 600px;
+        max-height: 555px;
         width: 100%;
         flex-shrink: 0;
         border-radius: 10px;
@@ -328,7 +254,7 @@
       }
 
       .slideshow-track img {
-        height: 100px;
+        max-height: 100px;
         width: auto;
         flex: 0 0 auto;
         margin-right: 10px;
@@ -364,6 +290,11 @@
         margin-top: 20px;
       }
 
+      .reservation-details {
+        align-items: flex-start; 
+        gap: 10px;
+      }
+
       .event-column {
         flex: 1 1 45%;
         display: flex;
@@ -377,12 +308,6 @@
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         font-size: 1rem;
-      }
-
-      @media (max-width: 1068px) {
-        .event-column {
-          flex: 1 1 100%;
-        }
       }
 
       .center-items {
@@ -413,6 +338,92 @@
         border-radius: 20px;
       }
 
+      .specialties-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .table-reservation-header {
+        padding: 10px;
+      }
+
+      .festine-events-header {
+        padding: 10px;
+      }
+
+      .newsletter-announcements-header {
+        padding: 10px;
+      }
+
+      .clients-feedbacks-header {
+        padding: 10px;
+      }
+
+      .delivery-header {
+        /* padding: 10px; */
+      }
+
+      .partners-header {
+        padding: 15px;
+      }
+
+      .contact-header {
+        padding: 15px;
+      }
+
+      .subscribe-button {
+        border-radius: 2rem;
+      }
+
+      .shared-input {
+        /* padding: 10px; */
+      }
+
+      .pagination-buttons {
+        border-radius: 30px;
+      }
+
+      .toogle-button {
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 10px;
+      }
+
+      .rights-reserved-header {
+        text-align: center; 
+        margin-top: 2rem;
+      }
+
+      .reservation-btn {
+        display: none;
+        height: 40px;
+        text-decoration: none;
+      }
+
+      @media (min-width: 768px) {
+        .footer-section {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 2rem;
+        }
+
+        .footer-section > div {
+          width: 48%;
+        }
+
+        .contact-info {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .contact-info span {
+          margin: 0 1rem;
+        }
+      }
+
       @media (max-width: 768px) {
         .box {
           flex-direction: column; /* fiecare imagine pe rând propriu */
@@ -427,6 +438,255 @@
           height: 200px;
         }
       }
+
+      @media (min-width: 1068px) {
+        .reservation-carousel-container {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        
+        .reservation-form, .carousel-section {
+          width: 48%;
+        }
+      }
+
+      @media (max-width: 1068px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 69px;
+        }
+
+        .nav-toggle {
+          display: flex;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-top: 5px;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        .nav-links a {
+          padding: 15px;
+          border-top: 1px solid #444;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .event-column {
+          flex: 1 1 100%;
+        }
+      }
+
+      @media (min-width: 110rem) {
+        .toogle-icon,
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .newsletter-announcements-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 1.2rem;
+        }
+
+        .slideshow-track img {
+          max-height: 130px;
+        }
+
+        .carousel img {
+          max-height: 630px;
+        }
+      }
+
+      @media (min-width: 120rem) {
+        .toogle-icon,
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .clients-feedbacks-header,
+        .newsletter-announcements-header,
+        .festine-events-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 1.5rem;
+        }
+        
+        .slideshow-track img {
+          max-height: 130px;
+        }
+      }
+
+      @media (min-width: 130rem) {
+        .toogle-icon,
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .clients-feedbacks-header,
+        .newsletter-announcements-header,
+        .festine-events-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 1.5rem;
+        }
+
+        .slideshow-track img {
+          max-height: 130px;
+        }
+      }
+
+      @media (min-width: 140rem) {
+        .toogle-icon,
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .clients-feedbacks-header,
+        .newsletter-announcements-header,
+        .festine-events-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 1.5rem;
+        }
+
+        .slideshow-track img {
+         max-height: 170px;
+        }
+        
+        .carousel img {
+          max-height: 700px;
+        }
+      }
+
+      @media (min-width: 150rem) {
+        .toogle-icon,
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .clients-feedbacks-header,
+        .newsletter-announcements-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 1.5rem;
+        }
+
+        .slideshow-track img {
+         max-height: 170px;
+        }        
+      }
+
+      @media (min-width: 160rem) {
+        .toogle-icon,
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .clients-feedbacks-header,
+        .newsletter-announcements-header,
+        .festine-events-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 2.2rem;
+        }
+
+        .slideshow-track img {
+         max-height: 230px;
+        }
+        
+        .carousel img {
+          max-height: 900px;
+        }        
+      }      
+
+      @media (min-width: 250rem) {
+        .event-item,
+        .rights-reserved-header,
+        .pagination-buttons,
+        .shared-input,
+        .feedback-item,
+        .subscribe-button,
+        .contact-info,
+        .contact-header,
+        .partners-header,
+        .delivery-header,
+        .clients-feedbacks-header,
+        .newsletter-announcements-header,
+        .festine-events-header,
+        .table-reservation-header,
+        .menu-item,
+        .specialties-header,
+        .nav-links {
+          font-size: 2.8rem;
+        }
+        
+        .slideshow-track img {
+         max-height: 280px;
+        }
+
+        .carousel img {
+          max-height: 1050px;
+        }          
+      }
     </style>
   </head>
   
@@ -435,31 +695,31 @@
     <nav class="elements-align-center">
       <button class="nav-toggle" onclick="toggleMenu()">☰</button>
       <div class="nav-links" id="navLinks"> 
-          <a href="#specialties">Specialties</a>
-          <a href="#reservation-carousel">Reservation</a>
-          <a href="#reservation-carousel">Events</a>
-          <a href="#delivery">Delivery</a>
-          <a href="#partners">Partners</a>          
-          <a href="#connections">Feedback</a>
-          <a href="#contact">Contact</a>
+          <a href="#specialties" onclick="toggleMenu()">Specialties</a>
+          <a href="#reservation-carousel" onclick="toggleMenu()">Reservation</a>
+          <a href="#reservation-carousel" onclick="toggleMenu()">Events</a>
+          <a href="#delivery" onclick="toggleMenu()">Delivery</a>
+          <a href="#partners" onclick="toggleMenu()">Partners</a>          
+          <a href="#connections" onclick="toggleMenu()">Feedback</a>
+          <a href="#contact" onclick="toggleMenu()">Contact</a>
       </div>
     </nav> 
     
     <img src="assets/wallpaper.jpg" alt="Parliament Building" class="header-image" />
 
     <section id="specialties" class="section">
-      <h2 class="padding10" style="display: flex; align-items: center; gap: 10px;">
-        <span>Specialties</span>
-        <button id="toggleGalleryBtn" onclick="toggleGallery()" style="padding: 5px 10px; font-size: 14px; border-radius: 10px;">
+      <h2 class="specialties-header">
+        <span class="specialties-header">Specialties</span>
+        <button class="toogle-button" id="toggleGalleryBtn" onclick="toggleGallery()">
           <!-- <span id="toggleText">Show Less</span> -->
-          <i id="toggleIcon" class="fa-solid fa-down-left-and-up-right-to-center"></i>
+          <i id="toggleIcon" class="toogle-icon fa-solid fa-down-left-and-up-right-to-center"></i>
         </button>        
       </h2>      
       <div id="specialtiesGallery">
-      <div class="pagination elements-align-center pagination-buttons">
-        <button class="page-btn" data-page="1" style="border-radius: 30px;">1</button>
-        <button class="page-btn" data-page="2" style="border-radius: 30px;">2</button>
-        <button class="page-btn" data-page="3" style="border-radius: 30px;">3</button>
+      <div class="pagination elements-align-center">
+        <button class="page-btn pagination-buttons" data-page="1">1</button>
+        <button class="page-btn pagination-buttons" data-page="2">2</button>
+        <button class="page-btn pagination-buttons" data-page="3">3</button>
       </div>
 
         <br>
@@ -491,10 +751,10 @@
           </div> -->
         </div>
   
-      <div class="pagination elements-align-center pagination-buttons">
-        <button class="page-btn" data-page="1" style="border-radius: 30px;">1</button>
-        <button class="page-btn" data-page="2" style="border-radius: 30px;">2</button>
-        <button class="page-btn" data-page="3" style="border-radius: 30px;">3</button>
+      <div class="pagination elements-align-center">
+        <button class="page-btn pagination-buttons" data-page="1">1</button>
+        <button class="page-btn pagination-buttons" data-page="2">2</button>
+        <button class="page-btn pagination-buttons" data-page="3">3</button>
       </div>
       </div>
     </section>
@@ -502,23 +762,22 @@
     <section id="reservation-carousel" class="section">
       <div class="reservation-carousel-container">
         <div class="reservation-form">
-          <h2 class="padding10">
+          <h2 class="table-reservation-header">
             Table Reservation
-            <a href="#reservation-carousel" type="button" id="show-reservation-btn" style="display: none; height: 40px; text-decoration: none;" onclick="showLatestReservation()">
+            <a class="reservation-btn" href="#reservation-carousel" type="button" id="show-reservation-btn" onclick="showLatestReservation()">
               (Show)
             </a>
           </h2>
           
-
-          <div style="display: flex; align-items: flex-start; gap: 10px;">
+          <div class="reservation-details">
             <form id="reservation-form">
-              <input type="text" id="name" placeholder="Your Name" required />
-              <input type="email" id="email" placeholder="Your Email" required />
-              <input type="tel" id="phone" placeholder="Phone Number" required />
-              <input type="number" id="guests" placeholder="Number of Guests" required />
-              <input type="date" id="date" required />
-              <input type="time" id="time" required />
-              <button type="submit" style="border-radius: 20px;" onclick="sendReservation()">Book Now</button>
+              <input class="shared-input" type="text" id="name" placeholder="Your Name" required />
+              <input class="shared-input" type="email" id="email" placeholder="Your Email" required />
+              <input class="shared-input" type="tel" id="phone" placeholder="Phone Number" required />
+              <input class="shared-input" type="number" id="guests" placeholder="Number of Guests" required />
+              <input class="shared-input" type="date" id="date" required />
+              <input class="shared-input" type="time" id="time" required />
+              <button class="subscribe-button" type="submit" onclick="sendReservation()">Book Now</button>
             </form>            
           </div>
 
@@ -535,7 +794,7 @@
         </div>
     
         <div class="carousel-section">
-          <h2 class="padding10">Festive Events</h2>
+          <h2 class="festine-events-header">Festive Events</h2>
           <div class="carousel-wrapper">
             <button class="carousel-arrow left" onclick="prevSlide()">&#10094;</button>
             <div class="carousel" id="carousel">
@@ -552,33 +811,33 @@
     <footer>
       <div id="connections">
         <div class="footer-section">
-          <div id="newsletter">
-            <h3 class="padding10">Newsletter Announcements</h3>
+          <div>
+            <h3 class="newsletter-announcements-header">Newsletter Announcements</h3>
             <form id="newsletter-form">
-              <input type="email" id="newsletter-email" placeholder="Your Email" required />
-              <input type="text" id="genre" placeholder="Preferred Music Genre" />
-              <input type="text" id="artist" placeholder="Preferred Artist Name" />
-              <button type="submit" style="border-radius: 20px;" onclick="sendNewsletter()">Subscribe</button>
+              <input class="shared-input" type="email" id="news-email" placeholder="Your Email" required />
+              <input class="shared-input" type="text" id="genre" placeholder="Preferred Music Genre" />
+              <input class="shared-input" type="text" id="artist" placeholder="Preferred Artist Name" />
+              <button class="subscribe-button" type="submit" onclick="sendNewsletter()">Subscribe</button>
             </form>
           </div>
 
-          <div id="feedback">
-            <h3 class="padding10">Clients Feedbacks</h3>
+          <div>
+            <h3 class="clients-feedbacks-header">Clients Feedbacks</h3>
             <form id="feedback-form">
-              <input type="text" id="feedback-name" placeholder="Your Name" required />
-              <textarea id="feedback-message" rows="4" placeholder="Your Feedback" required></textarea>
-              <button type="submit" style="border-radius: 20px;" onclick="sendFeedback()">Submit</button>
-            </form>
-            <br> <br>
+              <input class="shared-input" type="text" id="feedback-name" placeholder="Your Name" required />
+              <textarea class="shared-input" id="feedback-message" rows="4" placeholder="Your Feedback" required></textarea>
+              <button class="subscribe-button" type="submit" onclick="sendFeedback()">Submit</button>
+            </form>            
           </div>
         </div>
 
+        <br>
         <div class="feedback-list" id="feedback-list">
-          <!-- Feedback items will be dynamically inserted here -->
+          
         </div>
         
         <div class="image-container">
-          <h3 id="delivery">Delivery</h3>
+          <h3 class="delivery-header" id="delivery">Delivery</h3>
           <div class="box" id="X">
             <img src="assets/delivery/delivery1.png" alt="Imagine A">
             <img src="assets/delivery/delivery2.png" alt="Imagine B">
@@ -592,9 +851,8 @@
         </div>
         
         <br>
-        <!-- Slideshow între Newsletter și Contact Us -->
         <div id="image-slideshow-section">
-          <h3 class="padding15" id="partners">Partners</h3>
+          <h3 class="partners-header" id="partners">Partners</h3>
           <div class="slideshow-wrapper">
             <button class="slideshow-arrow left" onclick="prevSlideshowSlide()">&#10094;</button>
             <div class="slideshow-viewport">
@@ -630,7 +888,7 @@
                 <img src="assets/partners/partner13.jpg" alt="1">
                 <img src="assets/partners/partner14.jpg" alt="1">
                 <img src="assets/partners/partner15.jpg" alt="1">
-                <img src="assets/partners/partner16.jpg" alt="1">                    
+                <img src="assets/partners/partner16.jpg" alt="1">                        
               </div>
             </div>
             <button class="slideshow-arrow right" onclick="nextSlideshowSlide()">&#10095;</button>
@@ -639,7 +897,7 @@
 
         <div id="contact">
           <br>
-          <h3 class="padding15">Contact Us</h3>
+          <h3 class="contact-header">Contact Us</h3>
           <iframe class="height200" style="border-radius: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.685857297522!2d26.08804781558543!3d44.42721037910244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff37ac9e56d5%3A0x859f5d78a63fa10e!2sPalatul%20Parlamentului!5e0!3m2!1sen!2sro!4v1648123456789" allowfullscreen="" loading="lazy"> </iframe>
           <div class="contact-info"> 
             <span><strong>Address:</strong> Strada Izvor 2-4, București 050563</span> 
@@ -647,7 +905,7 @@
             <span><strong>Phone:</strong> +40 21 123 4567</span> </div>
         </div>
       </div>
-      <p style="text-align:center; margin-top: 2rem;">&copy; 2025 Restaurant Website</p>
+      <p class="rights-reserved-header">&copy; 2025 Restaurant Website</p>
     </footer>
     
     <script>
@@ -743,8 +1001,8 @@
         gallery.style.display = galleryVisible ? "block" : "none";
         // toggleText.textContent = galleryVisible ? "Show Less" : "Show More";
         toggleIcon.className = galleryVisible
-          ? "fa-solid fa-down-left-and-up-right-to-center"
-          : "fa-solid fa-up-right-and-down-left-from-center";
+          ? "toogle-icon fa-solid fa-down-left-and-up-right-to-center"
+          : "toogle-icon fa-solid fa-up-right-and-down-left-from-center";
       }
     
       const carousel = document.getElementById('carousel');
@@ -998,7 +1256,7 @@
         document.getElementById('newsletter-form').addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        const email = document.getElementById('newsletter-email').value;
+        const email = document.getElementById('news-email').value;
         const genre = document.getElementById('genre').value;
         const artist = document.getElementById('artist').value;
 
